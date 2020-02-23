@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* div {
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            display: none;
+            padding: 50px;
+            border: 2px solid black;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: teal;
+            border-radius: 8px;
+            color: white;
+            border: none;
+        } */
+
+        /* .abc {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin-top: 20px;
+            padding: 20px;
+            font-size: 30px;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <!-- <button onclick="myfun()" class="btn"> click me for modal</button>
+    <button onclick="myfun_1()" class="btn">click me for modal none</button>
+    <div id="modal">TRY CATCH CLASSES</div>
+
+    <script>
+        function myfun() {
+            document.getElementById('modal').style.display = 'block';
+        }
+        function myfun_1() {
+            document.getElementById('modal').style.display = 'none';
+
+        }
+    </script> -->
+
+    <!-- <div class="abc" onmouseover="myfun1()">onmouseover</div>
+    <div class="abc" onmouseout="myfun2()">onmouseout</div>
+
+    <script>
+        function myfun1() {
+            alert('onmousehover');
+        }
+        function myfun2() {
+            alert('onmouseout');
+        }
+    </script> -->
+
+    <!-- <img src="img/mountain-6.jpg" id="img-1" onmouseover="myfun2()" alt="" onmouseout="myfun3()">
+
+    <script>
+        function myfun2() {
+            document.getElementById('img-1').src = 'img/mountain-2.jpg';
+
+        }
+        function myfun3() {
+            document.getElementById('img-1').src = 'img/mountain-7.jpg';
+
+        }
+    </script>
+    <div class="abc" onmouseup="myfun4()">on mouse up</div>
+    <div class="abc" onmousedown="myfun5()">on mouse down</div>
+    <div class="abc" ondblclick="myfun6()">on dblclick</div>
+
+    <script>
+        function myfun4() {
+            alert('onmouseup');
+        }
+        function myfun5() {
+            alert('onmousedown');
+        }
+        function myfun6() {
+            alert('ondblclick');
+        }
+    </script> -->
+
+    <input type="text" name="" id="" onfocus="inputfun1()" placeholder="on focus">
+    <input type="text" name="" id="" oninput="inputfun2()" placeholder="on input">
+    <input type="text" name="" id="" onblur="inputfun3()" placeholder="on blur">
+    <input type="text" name="" id="" onselect="inputfun4()" placeholder="on select">
+    <input type="text" name="" id="" oncopy="inputfun5()" placeholder="on copy">
+    <input type="text" name="" id="" onkeypress="inputfun6()" placeholder="on keypress">
+    <input type="text" name="" id="" onkeyup="inputfun7()" placeholder="on keyup">
+    <input type="text" name="" id="" onkeydown="inputfun8()" placeholder="on keydown">
+
+    <form action="">
+        <select name="" id="" onchange="inputfun9()">
+            <option value="">JS</option>
+            <option value="">PYTHON</option>
+            <option value="">PHP</option>
+
+        </select>
+    </form>
+
+    <script>
+        function inputfun1() {
+            alert('on focus');
+        }
+        function inputfun2() {
+            alert('on input');
+        }
+        function inputfun3() {
+            alert('on blur');
+        }
+        function inputfun4() {
+            alert('on select');
+        }
+        function inputfun5() {
+            alert('on copy');
+        }
+        function inputfun6() {
+            alert('on key press');
+        }
+        function inputfun7() {
+            alert('on key up');
+        }
+        function inputfun8() {
+            alert('on key down');
+        }
+        function inputfun9() {
+            alert('on change');
+        }
+
+    </script>
+    <input type="text" name="" id="demo" placeholder="type here" oninput="input10()">
+    <p id="demo1">see here</p>
+    <script>
+        function input10() {
+            var x = document.getElementById('demo').value;
+            document.getElementById('demo1').innerHTML = x;
+            // console.log(document.getElementById('demo').value);
+        }
+    </script>
+
+</body>
+
+</html>

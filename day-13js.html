@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+    </style>
+</head>
+
+<body onscroll="myfunction()" style="background-color: red;">
+    <button onclick="myyFunction()">click me</button>
+    <button onclick="stop()">stop me</button>
+    <button onclick="interval()">Interval</button>
+    <script>
+
+
+
+        // function myfunction() {
+        //     alert(" you have scrolled")
+        // }
+
+
+
+        var a;
+        function myyFunction() {
+            a = setTimeout(Fun, 5000);
+        }
+
+
+        function Fun() {
+            alert("Hello! settimeout");
+        }
+
+        function stop() {
+            clearTimeout(a);
+        }
+        var b;
+
+        // function interval() {
+        //     b = setInterval(alertfun, 3000);
+        // }
+
+        // function alertfun() {
+        //     alert("Hey!");
+
+        // }
+
+
+        // var x = 12.22
+        // document.write(typeof(x));
+
+
+
+        // The forEach() method calls a function once for each element in an array, in order.
+        document.write('<br>------------------------')
+        var fruits = ["apple", "orange", "cherry", "papaya"];
+        fruits.forEach(function (val, index) {
+            document.write(val + '' + index + '<br>');
+        });
+
+    </script>
+
+</body>
+
+</html>

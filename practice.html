@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .abc {
+            color: tomato;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="demo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, iusto! Minus laborum voluptates
+        praesentium
+        voluptas unde odit ipsam dicta veritatis rerum accusantium beatae, illum dignissimos exercitationem, voluptatum
+        distinctio maxime velit.</p>
+
+    <button type="button" onclick="show()">Click me</button>
+
+    <input type="text" id="demo-1" value="try catch" placeholder="Type here">
+
+    <button type="button" onclick="myfun()">click me for alert box</button>
+
+    <input type="text" id="demo-2" value="" placeholder="Type Numbers">
+    <input type="text" id="demo-3" value="" placeholder="Type Numbers">
+    <button type="button" onclick="add()">Click me to add numbers</button>
+
+    <div class="class1">1</div>
+    <div class="class1">2</div>
+    <div class="class1">3</div>
+    <button onclick="abc()">try it by class name</button>
+
+    <h1 class="try">4</h1>
+    <h1 class="try">5</h1>
+    <h1 class="try">6</h1>
+    <button onclick="abc_1()">try it by class name</button>
+    <button onclick="abc_2()">try it by tag name</button>
+
+    <script>
+
+        document.getElementById('demo').innerHTML;
+
+        var a = document.getElementById('demo').innerHTML;
+        // window.alert(a)
+
+
+
+
+
+        function show() {
+            var b = document.getElementById('demo').innerHTML;
+            window.alert(b);
+        }
+
+
+
+
+
+
+
+        document.getElementById('demo-1').value = 'new try catch';
+        // var c = document.getElementById('demo-1').value;
+
+        // window.alert(c);
+
+
+
+        function myfun() {
+            window.alert(46464);
+        }
+
+
+
+        // var f = document.getElementById('demo-2').value;
+        // var t = document.getElementById('demo-3').value;
+
+        // var add = f + t;
+
+
+        // var add = Number(f) + Number(t);
+        // window.alert(add);
+
+        function add() {
+            var f = document.getElementById('demo-2').value;
+            var t = document.getElementById('demo-3').value;
+            // var add = f + t;
+            var add = Number(f) + Number(t);
+            window.alert(add);
+
+        }
+
+
+        var name = 'abc';
+        var age = 10;
+
+        // window.alert('my name is ' + name + " " + 'and age is' + " " + age);
+
+
+
+        function abc() {
+            var x = document.getElementsByClassName('class1')
+            x[0].innerHTML = 'hello';
+            x[0].style.backgroundColor = 'blue';
+        }
+
+        function abc_1() {
+            var a = document.getElementsByClassName('try');
+            a[0].innerHTML = 'hello java';
+        }
+
+        function abc_2() {
+            var a = document.getElementsByTagName('h1');
+            a[1].innerHTML = 'hello java';
+            a[1].setAttribute('class', 'abc');
+        }
+
+        var b = Array('abc', 'efg', 'hig', 12345);
+        // alert(b[2]);
+
+        var c = [1, 2, 3, 4, 5, 6,];
+        // alert(c);
+
+        var obj = { name: 'baba', age: '23', state: 'mumbai', phone: Array(12345678, 7654321) };
+        console.log(obj);
+        // window.alert(obj.name);
+        // window.alert(obj.phone[1]);
+        document.write(obj.name, obj.age, obj.state, obj.phone[1]);
+
+        document.write('<br>')
+
+        for (var x = 1; x <= 5; x = x + 1) {
+            document.write(x + '<br>');
+
+        }
+        document.write('<br>')
+
+        for (var x = 5; x >= 1; x = x - 1) {
+            document.write(x + '<br>');
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

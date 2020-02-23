@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .my-style {
+            width: 400px;
+            height: 100px;
+            border: 2px solid black;
+            background-color: cadetblue;
+        }
+
+        input {
+            display: block;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>MouseHover on div to change colors randomly. </h2>
+    <!-- <div class="my-style" onmouseover="onmouseHohverColorChange()" id="color-change">hover me</div> -->
+
+    <script>
+        function onmouseHohverColorChange() {
+            var x = Math.floor(Math.random() * 255);
+            var y = Math.floor(Math.random() * 170);
+            var z = Math.floor(Math.random() * 145);
+            var backgroundColor = "rgb(" + x + "," + y + "," + z + ")";
+            // document.getElementById('color-change').style.backgroundColor = backgroundColor;
+
+        }
+
+    </script>
+
+    <div class="my-style" onclick="" id="color-change-1">hover me</div>
+    <div class="my-style" onclick="" id="color-change-2">hover me</div>
+    <div class="my-style" onclick="onmouseHohverColorChange1()" id="color-change-3">hover me</div>
+    <div class="my-style" onclick="onmouseHohverColorChange()" id="color-change-4">hover me</div>
+
+    <script>
+        function onmouseHohverColorChange() {
+            var x = Math.floor(Math.random() * 180);
+            var y = Math.floor(Math.random() * 180);
+            var z = Math.floor(Math.random() * 180);
+            var backgroundColor = "rgb(" + x + "," + y + "," + z + ")";
+            document.getElementById('color-change-4').style.backgroundColor = backgroundColor;
+
+
+            var a = document.getElementById('color-change-4').style.backgroundColor = backgroundColor;
+            document.getElementById('color-change-1').style.backgroundColor = a;
+
+        }
+
+
+
+
+
+        function onmouseHohverColorChange1() {
+            var x = Math.floor(Math.random() * 242);
+            var y = Math.floor(Math.random() * 170);
+            var z = Math.floor(Math.random() * 145);
+            var backgroundColor = "rgb(" + x + "," + y + "," + z + ")";
+            document.getElementById('color-change-3').style.backgroundColor = backgroundColor;
+
+            var b = document.getElementById('color-change-3').style.backgroundColor
+            document.getElementById('color-change-2').style.backgroundColor = b;
+
+        }
+
+
+
+    </script>
+
+    <form action="" onsubmit="return validate()">
+        <label for="">Name:</label>
+        <input type="text" name="" id="name" placeholder="type here">
+        <label for="" id="demo" style="color: red;"></label><br><br>
+
+        <label for="">Password:</label>
+        <input type="password" name="" id="password" placeholder="type here">
+        <label for="" id="demo1" style="color: red;"></label><br><br>
+
+        <button type="submit">submit</button>
+
+    </form>
+
+    <script>
+
+        function validate() {
+            var a = document.getElementById('name');
+            var b = document.getElementById('password');
+            flag = true;
+
+            if (a.value.trim() == '') {
+                alert('blank name');
+                a.style.border = '2px solid red';
+                document.getElementById('demo').innerHTML = 'enter your name';
+                flag = false
+
+
+            }
+
+            if (b.value.trim() == '') {
+                alert('blank password');
+                b.style.border = '2px solid red';
+                document.getElementById('demo1').innerHTML = 'enter your password';
+                if (b.value.trim().length < 5 && b.value.trim().length) {
+                    document.getElementById('demo1').innerHTML = 'password is too short';
+                    flag = false
+                }
+            }
+
+            // if (b.value.length < 5) {
+            //     var e = document.getElementById('demo2') = 'password is too short';
+            //     flag = false
+            // }
+
+
+            // flag = false
+
+
+            return flag
+        }
+
+
+
+
+        function abc(a, b) {
+            return a + b;
+        }
+
+        document.write(abc(12, 3));
+
+
+        // function abc(a, b) {
+        //     var c = a + b;
+        //     document.write(c);
+
+        // }
+
+        // abc(5, 5);
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

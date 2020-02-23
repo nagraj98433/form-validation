@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" onsubmit="return validate();">
+        <label for="">Email:</label>
+        <input type="text" name="" value="" id="email" placeholder="type here">
+        <p for="" id="email_error">see here</p>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <script>
+        var validateReturnValue = validate();
+        console.log(validateReturnValue); // value will be true/false;
+        function validate() {
+            var email = document.getElementById('email').value;
+            var email_regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            // return;
+            if (email == '') {
+                document.getElementById('email_error').innerHTML = 'please enter mail';
+                document.getElementById('email_error').style.display = 'block';
+                document.getElementById('email_error').style.color = 'red';
+                document.getElementById('email').style.border = '1px solid red';
+
+                return false;
+            }
+            else if (!email.match(email_regex)) {
+                document.getElementById('email_error').innerHTML = 'please enter email correctly';
+                document.getElementById('email_error').style.color = 'red';
+
+                return false;
+            }
+
+            return true;
+        }
+
+
+
+
+        var fruits = ['mango', 'apple', 'banana', ' papaya'];
+        fruits[0] = 'kiwi';
+        // fruits.pop();
+        // fruits.shift();
+        // fruits.unshift();
+        // fruits.push('kiwi')
+        for (var x = 0; x < fruits.length; x++) {
+            document.write(fruits[x] + '<br>');
+        }
+
+        //fruits.pop()  method removes the last element of an array
+
+        //fruits.shift() method removes the first item of an array
+
+        //The unshift() method adds new items to the beginning of an array, and returns the new length.
+
+        //The push() method adds new items to the end of an array, and returns the new length.
+
+
+
+
+    </script><br>
+
+    <!-- task is here -->
+
+    <input type="text" name="" id="demo2" value="" placeholder="type here" oninput="abc()">
+    <input type="text" name="" id="demo3" value="1" placeholder="type here">
+    <p id="demo4"></p>
+
+    <script>
+        function abc() {
+
+            var a = document.getElementById('demo2').value;
+            var b = document.getElementById('demo3').value;
+            for (i = 0; i < a; i++) {
+                document.getElementById('demo4').innerHTML += b + '<br>';
+                //innerHTML=innerHTML+1
+            }
+
+
+        }
+
+        document.write('<br>')
+
+        // task is here
+
+
+
+        var fruits = ['mango', 'apple', 'banana', 'papaya', 'kiwi'];
+        var f2 = fruits.slice(1);
+        document.write(f2);
+
+        // the slice() method creates a new array. it does not remove any elements from the source array.
+
+
+
+        document.write('<br>')
+
+
+        var fruits = ['mango', 'apple', 'banana', 'papaya', 'kiwi', 'demo'];
+        var f2 = fruits.splice(2, 0, 'graps', 'chickoo');
+        document.write(fruits);
+
+        // the second perameter(0) defines how many elements should be removed
+
+        document.write('<br>')
+
+    </script><br><br>
+
+    <button type="button" id="myBtn">click me for multi events</button>
+    <p id="demo5"></p>
+
+    <script>
+        //addEventListener attaches event and function
+
+        var x = document.getElementById('myBtn');
+        x.addEventListener('mouseover', myfunction);
+        x.addEventListener('click', mysecondfunction);
+        x.addEventListener('mouseout', mythirdfunction);
+
+        function myfunction() {
+            document.getElementById('demo5').innerHTML += 'moused over! <br>'
+        }
+        function mysecondfunction() {
+            document.getElementById('demo5').innerHTML += 'clicked! <br>'
+        }
+        function mythirdfunction() {
+            document.getElementById('demo5').innerHTML += 'mouse out! <br>'
+        }
+
+
+    </script>
+
+</body>
+
+</html>

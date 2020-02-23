@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .abc {
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <h1>CALCULATOR</h1>
+    </div>
+    <div class="formstyle">
+        <form name="forms">
+            <input type="text" name="answer" value=""> <br><br>
+
+            <input type="button" value="1" onclick="forms.answer.value">
+            <input type="button" value="2" onclick="forms.answer.value +='2'">
+            <input type="button" value="3" onclick="forms.answer.value +='3'"><br>
+
+            <input type="button" value="4" onclick="forms.answer.value +='4'">
+            <input type="button" value="5" onclick="forms.answer.value +='5'">
+            <input type="button" value="6" onclick="forms.answer.value +='6'"><br>
+
+            <input type="button" value="7" onclick="forms.answer.value +='7'">
+            <input type="button" value="8" onclick="forms.answer.value +='8'">
+            <input type="button" value="9" onclick="forms.answer.value +='9'"><br>
+
+            <input type="button" value="+" onclick="forms.answer.value +='+'">
+            <input type="button" value="-" onclick="forms.answer.value +='-'">
+            <input type="button" value="*" onclick="forms.answer.value +='*'"><br>
+
+            <input type="button" value="/" onclick="forms.answer.value +='/'">
+            <input type="button" value="0" onclick="forms.answer.value +='0'">
+            <input type="button" value="=" onclick="forms.answer.value = eval(forms.answer.value)"><br><br>
+
+            <input type="button" name="" id="" value="clear all" onclick="forms.answer.value=''">
+
+        </form>
+    </div>
+
+    <script>
+        var k = 12;
+        var m = 12;
+        var n = (k = 12);
+        var n = (k == m);
+        var n = (k != m);
+        var n = (k > m);
+        var n = (k < m);
+        var n = (k <= m);
+        var n = (k >= m);
+        var n = (k === m);
+
+        // window.alert(n);
+
+
+
+        var x = 22;
+        if (x == 5) {
+            document.write('x is 5');
+        }
+
+        else if (x < 5) {
+            document.write('x is less than 5');
+
+
+        }
+
+        else {
+            document.write('x is greater than 5');
+        }
+        document.write('<br>')
+
+
+        var x = 2;
+        if (x == 5) {
+            document.write('x is 5');
+        }
+
+        else if (x > 5 && x < 10) {
+            document.write('x is batween 5 and 10');
+        }
+
+        // else if (x > 5 || x < 10) {
+        //     document.write('x is batween 5 and 10');
+
+        // }
+        else {
+            document.write('x is 1 to 5');
+
+        }
+        document.write('<br>')
+
+
+
+        var a = 110;
+        var b = 20;
+        var c = 30;
+
+        if (a > b && a > c) {
+            document.write('a is greater');
+        }
+
+        else if (b > a && b > c) {
+            document.write('b is greater');
+        }
+
+        else {
+            document.write('c is greater');
+        }
+        document.write('<br>')
+
+
+
+
+
+
+        var a = 0;
+
+        if (a > 1) {
+            document.write('a is greater');
+        }
+
+        else if (b > a && b > c) {
+            document.write('b is greater');
+        }
+
+        else {
+            document.write('c is greater');
+        }
+        document.write('<br>')
+
+
+        var p = 40;
+        var n = 30;
+        var q = 50;
+
+        if (p == n && p == q) {
+            document.write('Equilateral Triangle')
+        }
+
+        else if (p == n || n == q) {
+            document.write('Isoceles Triangle')
+
+        }
+
+        else {
+            document.write('Scalene Triangle')
+        }
+        document.write('<br>')
+
+
+
+
+
+
+        var a = 2
+
+        if (a % 2 == 0) {
+            document.write('even');
+        }
+
+        else {
+            document.write('odd')
+        }
+        document.write('<br>')
+
+        function even_odd(a) {
+            if (a % 2 == 0) {
+                document.write('even');
+            }
+
+            else {
+                document.write('odd')
+            }
+
+        }
+
+        even_odd(23)
+        document.write('<br>')
+
+
+
+
+
+
+
+        var x = 2;
+
+        if (x % 7 == 0 && x % 5 == 0) {
+            document.write('number is divisible');
+        }
+        else if (x % 5 == 0) {
+            document.write('number is divisible');
+
+        }
+        else {
+            document.write('number is not divisible');
+
+        }
+
+    </script>
+
+    <div id="demo">try catch</div>
+    <button type="button" onclick="nnc()">click me for div visible</button>
+    <script>
+        function nnc() {
+            document.getElementById('demo').setAttribute('class', 'abc');
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

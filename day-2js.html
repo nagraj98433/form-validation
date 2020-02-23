@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Day-2-js</title>
+    <style>
+        .abc {
+            color: red;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="demo-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse laboriosam corrupti illum voluptatem
+        laudantium, quam natus debitis repellat nam sunt, numquam consequatur, architecto nisi illo maiores vel. In, hic
+        atque.</p>
+    <input type="text" id="demo-3" value="ABC">
+
+    <script>
+
+        document.getElementById('demo-2').innerHTML = 'nagraj';
+
+        // var a = document.getElementById('demo-2').innerHTML;
+        // alert(a)
+
+        // var b = document.getElementById('demo-3').value;
+        // alert(b)
+
+        // var b = document.getElementById('demo-3').value = 'pqr';
+        // alert(b)
+
+
+    </script>
+
+    <button type="button" onclick="abc()">click me</button>
+
+    <script>
+
+        function abc() {
+            alert(123)
+        }
+    </script>
+
+    <input type="text" id="demo-4" value="" placeholder="type number here">
+    <input type="text" id="demo-5" value="" placeholder="type number here">
+    <button type="button" onclick="add()">CLICK ME TO CALCULATE</button>
+
+    <script>
+        function add() {
+            var c = document.getElementById('demo-4').value;
+            var n = document.getElementById('demo-5').value;
+            var m = Number(c) + Number(n);
+            // var m = c + n;
+            // alert(m)
+        }
+
+
+    </script>
+
+    <a href="https://www.youtube.com/" id="demo-6">Youtube</a>
+
+    <script>
+
+        var y = document.getElementById('demo-6').getAttribute('href');
+
+        // alert(y)
+
+        // document.getElementById('demo-6').setAttribute('class', 'abc');
+
+
+    </script>
+
+    <button type="button" onclick="color()">click me to change color</button>
+
+    <script>
+
+        function color() {
+
+            document.getElementById('demo-6').setAttribute('class', 'abc');
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

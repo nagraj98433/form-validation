@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="increment()" style="background-color: tomato; padding: 5px 30px;">Add</button>
+    <button onclick="decrement()" style="background-color: teal; padding: 5px 30px;">Remove</button>
+
+    <div id="inputContainer">
+
+    </div>
+
+    <script>
+        var counter = 0;
+        function increment() {
+            counter++;
+            console.log(counter);
+            generateInput(counter);
+        }
+        function decrement() {
+            if (counter > 0)
+                counter--;
+            console.log(counter);
+            generateInput(counter);
+        }
+        function generateInput(counter) {
+            var inputHTML = '';
+            for (var a = 0; a < counter; a++) { // a = 0, a = 1
+                inputHTML = inputHTML + '<input type="text" name="" value="" placeholder="type here" id="demo' + a + '"><br>';
+                /*
+                a = 0 ---> inputHTML = '' + 'input' => 'input';
+                a = 1 ---> inputHTML = 'input' + 'input' => 'inputinput';
+                a = 2 ---> inputHTML = 'inputinput' + 'input' => 'inputinputinput';
+                */
+            }
+            console.log(inputHTML);
+            document.getElementById('inputContainer').innerHTML = inputHTML;
+        }
+    </script><br><br>
+
+    <input type="text" name="" value="" id="todoInput" placeholder="type here">
+    <button onclick="todoList()" id="" style="background-color: violet; padding: 5px 30px;">Todo list</button>
+    <p id="list"></p>
+    <ol id="todoList">
+
+    </ol>
+
+    <script>
+        function todoList() {
+            var a = document.getElementById('todoInput').value;
+            var b = document.getElementById('list').innerHTML += a + '<br>';
+
+        }
+
+
+
+        // function todoList() {
+        //     var item = document.getElementById('todoInput').value
+        //     var text = document.createTextNode(item)
+        //     var newItem = document.createElement('li')
+        //     newItem.appendChild(text)
+        //     Document.getElementById('todoList').appendChild(newItem)
+        // }
+
+        function wordcount(str) {
+            return str.split(" ").length;
+        }
+        document.write("Number of Words in a given String: " + wordcount("hello world two"));
+        document.write('<br>')
+
+        function Charcount(str) {
+            return str.slice().length;
+        }
+        document.write("Number of charcter in a given String: " + Charcount("helloworldtwo"));
+
+        document.write('<br>')
+    </script>
+
+    <select name="" id="demo1" onchange="color()">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="black">Black</option>
+        <option value="Yellow">Yellow</option>
+
+    </select>
+
+    <div style="width: 200px; height: 200px; border: 2px solid black;" id="demo2">pp1</div>
+
+    <script>
+        function color() {
+            var a = document.getElementById('demo1').value;
+            var b = document.getElementById('demo2').style.backgroundColor = a;
+
+        }
+
+
+
+
+        document.write(Math.PI);
+        document.write(Math.sqrt(4));
+        document.write(Math.pow(2, 4));
+        document.write(Math.round(12.5));
+        document.write(Math.abs(-123));
+        //the math.abs()function in javascript is used to return the absolute value of a number.it takes a number as its parameter and returns its absolute value.
+
+
+
+
+
+        document.write(Math.ceil(123.1));
+        document.write(Math.floor(123.9));
+        document.write(Math.max(2345, 45, 65, 6, 453424, 23));
+        document.write(Math.min(2345, 45, 65, 6, 453424, 23));
+        document.write(Math.random());
+        document.write(Math.floor(Math.random() * 30));
+
+
+
+        //number() can be used to convert javascript variables to numbers:
+
+
+        document.write(Number("  55"));
+        document.write(Number("55  "));
+        document.write(Number(" 55  "));
+        document.write(Number("55.12"));
+        document.write(Number("55,12"));
+        document.write(Number("55 12"));
+        document.write(Number(" 66 hii"));
+
+
+
+
+        // parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:
+
+        document.write(parseInt("10"));
+        document.write(parseInt("10.33"));
+        document.write(parseInt("10 6"));
+        document.write(parseInt("10 years"));
+
+        document.write(parseInt("years 10"));
+
+
+        // parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned:
+
+        document.write(parseFloat("10"))
+        document.write(parseFloat("10.66"))
+        document.write(parseFloat("10.33"))
+        document.write(parseFloat("34 45 66"))
+        document.write(parseFloat("   60   "))
+        document.write(parseFloat("40 years"))
+        document.write(parseFloat("He was 40"))
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

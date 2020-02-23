@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .abc {
+            color: red;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="class1">1</div>
+    <div class="class1">2</div>
+    <div class="class1">3</div>
+    <button onclick="abc()">try it by class name</button>
+
+    <script>
+
+        function abc() {
+            var x = document.getElementsByClassName('class1');
+            x[0].innerHTML = 'hello';
+            x[0].style.backgroundColor = 'blue';
+            // for (var a = 0; a <= x.length; a++) {
+            //     x[a].innerHTML = 'hello';
+            // }
+        }
+
+
+
+
+    </script>
+
+    <h1 class="baba">h1</h1>
+    <h1 class="baba">h2</h1>
+    <h1 class="baba">h3</h1>
+    <button onclick="xyz()">try it by class name</button>
+    <button onclick="bcc()">try it by tag name</button>
+
+    <script>
+
+        function xyz() {
+
+            var v = document.getElementsByClassName('baba');
+            v[0].innerHTML = 'hey how are you';
+            v[0].setAttribute('class', 'abc');
+
+        }
+        function bcc() {
+
+            var v = document.getElementsByTagName('h1');
+            v[1].innerHTML = 'hey how are you';
+
+        }
+
+        var a = ['abc', 'pqr', 'xyz', 12345];
+        // alert(a[1]);
+
+
+        var b = [1, 2, 3, 4, 5];
+        // alert(b);
+
+        var obj = {
+            name: 'nagraj', email: 'nagraj@.com', contact: '2345678'
+        };
+
+        console.log(obj);
+
+        document.write(obj.contact);
+
+
+    </script>
+
+</body>
+
+</html>

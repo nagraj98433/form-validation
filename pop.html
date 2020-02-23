@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" onsubmit="return validate();">
+        <label for="">Email:</label>
+        <input type="text" name="" value="" id="email" placeholder="type here">
+        <p for="" id="email_error">see here</p>
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <script>
+        function validate() {
+            var email = document.getElementById('email').value;
+            var email_regex = /^\W+@[a-zA-Z_]+7\.[a-zA-Z]{2,3}$/;
+            var flag = true;
+            if (email == '') {
+                document.getElementById('email_error').innerHTML = 'please enter mail';
+                document.getElementById('email_error').style.display = 'block';
+                flag = false;
+            }
+
+            else if (!email.match(email_regex)) {
+                document.getElementById('email_error').innerHTML = 'please enter email correctly';
+                flag = false;
+            }
+
+            return flag
+        }
+    </script>
+
+</body>
+
+</html>

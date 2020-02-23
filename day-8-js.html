@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .abc {
+            height: 200px;
+            width: 200px;
+            font-size: 30px;
+            background-color: pink;
+        }
+
+        .modalclass {
+            height: 100px;
+            width: 500px;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- call function onLoad on body  -->
+    <iframe src="https://www.trycatchclasses.com/" frameborder="0"></iframe>
+    <p id="demo"></p>
+
+    <script>
+        function onLoad() {
+            // window.alert('This page is loaded');
+            document.getElementById('demo').innerHTML = 'This Page is Loaded';
+        }
+    </script>
+
+    <p oncopy="fun1()" id="demo1">hello</p>
+    <script>
+
+        function fun1() {
+            document.getElementById('demo1').style.color = 'red';
+            document.getElementById('demo1').className = 'abc';
+
+        }
+    </script>
+
+    <button onclick="fun2(this)" title="Btn-1">btn-1</button>
+    <button onclick="fun2(this)" title="Btn-2">btn-2</button>
+    <button onclick="fun2(this)" title="Btn-3">btn-3</button>
+    <button onclick="fun2(this)" title="Btn-4">btn-4</button>
+    <button onclick="fun2(this)" title="Btn-5">btn-5</button>
+    <button onclick="fun2(this)" title="Btn-6">btn-6</button>
+
+    <script>
+        function fun2(a) {
+            a.style.color = 'red';
+            alert(a.getAttribute('title'));
+        }
+    </script>
+
+    <button onclick="myfun(this)">btn-1</button>
+    <button onclick="myfun(this)">btn-2</button>
+    <button onclick="myfun(this)">btn-3</button>
+
+    <div class="modalclass" id="modalid">
+        <span class="close">&times;</span>
+        <input type="text" name="" id="input">
+    </div>
+
+    <script>
+        var modal = document.getElementById("modalid");
+
+        function myfun(e) {
+
+            modal.style.display = "block"
+            var b = e.innerHTML;
+            document.getElementById("input").value = b;
+        }
+
+        var span = document.getElementsByClassName('close')[0];
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+        var d = Date();
+        var d = new Date('May 05, 2019 22:23:34');
+        var d = new Date(1999, 11, 5);
+        var d = new Date(1999, 0, 5, 12, 34, 3);
+        document.write(d);
+        var d1 = new Date();
+        document.write(d1.getDate());
+        document.write(d1.getMonth());
+        document.write(d1.getFullYear());
+        document.write(d1.getDay());
+        document.write(d1.getHours());
+        document.write(d1.toTimeString());
+        document.write(d1.toDateString());
+        document.write(d1.toString());
+        sdocument.write(d1.toUTCString()); //Universal Time
+    </script>
+
+</body>
+
+</html>

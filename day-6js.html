@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // for (var x = 1; x <= 5; x = x + 1) {
+        //     for (var j = 1; j <= x; j = j + 1) {
+        //         document.write('*');
+        //     }
+        //     document.write('<br>');
+        // }
+        // document.write('<br>');
+
+        // for (var x = 5; x >= 1; x = x - 1) {
+        //     for (var j = 1; j <= x; j = j + 1) {
+        //         document.write('*');
+        //     }
+        //     document.write('<br>');
+
+        // }
+
+
+        // for (var a = 1; a <= 50; a = a + 1) {
+        //     if (a % 3 == 0 && a % 5 == 0) {
+        //         document.write('number is divisible');
+        //         document.write(a + '<br>');
+
+        //     }
+        // }
+
+        // for (var a = 1; a <= 50; a = a + 1) {
+        //     if (a % 2 != 0) {
+        //         document.write(a + '<br>');
+        //     }
+        // }
+
+
+
+
+
+        // for (var x = 1; x <= 25; x = x + 1) {
+        //     for (var y = 1; y <= 10; y = y + 1) {
+        //         document.write(x + 'x' + y + '=' + x * y + '<br>');
+
+        //     }
+        //     document.write('<br>');
+        // }
+        // var a = {
+        //     'data': [
+        //         {
+        //             'name': 'student1',
+        //             'email': 'student1@gmail.com'
+        //         },
+        //         {
+        //             'name': 'student2',
+        //             'email': 'student2@gmail.com'
+        //         }
+        //     ]
+        // }
+        // document.write(a.data[0].name, ' ', a.data[0].email)
+        // document.write('<br>');
+        // document.write(a.data[1].name, ' ', a.data[1].email)
+
+
+        // var obj = {
+        //     // key : value
+        //     name: 'nagraj',
+        //     email: 'nagraj@.com',
+        //     contact: '2345678'
+        // };
+
+        // for (var x in obj) { // x => key
+        //     document.write(x + ':')
+        //     document.write(obj[x] + '<br>') // for dynamic key we use [] eg. obj['name']
+        // }
+
+
+
+        // var obj = {
+        //     name: 'nagraj', email: 'nagraj@.com', contact: '2345678'
+        // };
+
+        // for (var x in obj) {
+        //     // document.write(x+'<br>')
+        //     document.write(x + 'is' + ' ' + obj[x] + '<br>')
+
+
+        // }
+
+        var emp = {
+            emp1: {
+                name: 'nagraj', email: 'nagraj@.com', contact: '2345678',
+            },
+            emp2: {
+                name: 'mangesh', email: 'mangesh@.com', contact: '2540678',
+            }
+
+        }
+
+        for (var x in emp) {
+            // console.log(x);
+            var ob = emp[x];
+            for (var y in ob) {
+                // console.log(y);
+                document.write(ob[y] + '<br>');
+            }
+        }
+
+        // for (var x in emp) {
+        //     document.write('the name is' + emp[x].name + '<br>');
+        //     document.write('the email is' + emp[x].email + '<br>');
+        //     document.write('the contact is' + emp[x].contact + '<br>')
+        // }
+
+        // var fruits = ['mango', 'apple', 'banana', 'papaya', 'kiwi'];
+        // for (var x = 0; x <= 4; x = x + 1) {
+        //     document.write(fruits[x] + '<br>');
+        // }
+        // document.write('<br>');
+
+
+        // var fruits = ['mango', 'apple', 'banana', 'papaya', 'kiwi', 'chickoo', 'guava'];
+        // for (var x = 0; x <= fruits.length; x = x + 1) {
+        //     document.write(fruits[x] + '<br>');
+        // }
+
+        // var x = 1;
+        // while (x <= 10) {
+        //     document.write(x + '<br>');
+        //     x++;
+        // }
+
+
+        // var x = 1;
+        // do {
+        //     document.write(x + '<br>');
+        //     x++;
+
+        // }
+        // while (x <= 10);
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

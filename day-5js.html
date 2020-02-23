@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: tomato;
+            border: none;
+            padding: 10px 12px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>CALCULATOR</h1>
+    </div>
+    <div class="formstyle">
+        <form name="forms">
+            <input type="text" name="answer" id="answerField" readonly value="" placeholder="0"
+                style="text-align: right; padding: 0.5rem;"> <br><br>
+
+            <input type="button" value="1" class="numBtn" onclick="forms.answer.value +='1'">
+            <input type="button" value="2" class="numBtn" onclick="forms.answer.value +='2'">
+            <input type="button" value="3" class="numBtn" onclick="forms.answer.value +='3'"><br>
+
+            <input type="button" value="4" class="numBtn" onclick="forms.answer.value +='4'">
+            <input type="button" value="5" class="numBtn" onclick="forms.answer.value +='5'">
+            <input type="button" value="6" class="numBtn" onclick="forms.answer.value +='6'"><br>
+
+            <input type="button" value="7" class="numBtn" onclick="forms.answer.value +='7'">
+            <input type="button" value="8" class="numBtn" onclick="forms.answer.value +='8'">
+            <input type="button" value="9" class="numBtn" onclick="forms.answer.value +='9'"><br>
+
+            <input type="button" value="+" onclick="forms.answer.value +='+'">
+            <input type="button" value="-" onclick="forms.answer.value +='-'">
+            <input type="button" value="*" onclick="forms.answer.value +='*'"><br>
+
+            <input type="button" value="/" onclick="forms.answer.value +='/'">
+            <input type="button" value="0" class="numBtn" onclick="forms.answer.value +='0'">
+            <input type="button" value="="
+                onclick="console.log(forms.answer.value);forms.answer.value = eval(forms.answer.value)"><br><br>
+
+            <input type="button" name="" id="" value="clear all" onclick="forms.answer.value=''">
+
+        </form>
+    </div>
+
+    <img src="img/mountain-6.jpg" alt="" id="img"><br>
+    <button onclick="img_change()">Click to change img</button>
+    <button onclick="img_first()">Back to first img</button>
+    <script>
+        var answerField = document.getElementById('answerField')
+        var numBtns = document.getElementsByClassName('numBtn');
+        answerField.value
+    </script>
+    <script>
+        function img_change() {
+            debugger
+            document.getElementById('img').src = 'img/mountain-2.jpg';
+
+        }
+        function img_first() {
+            debugger
+            document.getElementById('img').src = 'img/mountain-6.jpg';
+        }
+
+
+        // var num = 50;
+
+        // if (num % 2 == 0) {
+        //     document.write('this number is even')
+        // }
+        // else {
+        //     document.write('this number is odd')
+        // }
+
+        function checkOddEven(num) {
+            if (typeof num === 'undefined') {
+                document.write('Argument is not valid number')
+                return
+            }
+            if (num % 2 === 0) {
+                document.write('this number is even')
+            }
+            else {
+                document.write('this number is odd')
+            }
+
+        }
+        checkOddEven("22")
+        // checkOddEven(18)
+
+        // var divisibleNumber = 6;
+        // var divisible_Number = 6;
+
+        // if (divisible_Number % divisibleNumber == 0) {
+        //     document.write('this number is divisible')
+
+        // }
+        // else {
+        //     document.write('this number is not divisible')
+
+        // }
+
+        function checkDivisible(numberToDivide, divideBy) {
+            if (numberToDivide % divideBy == 0) {
+                document.write('this number is divisible')
+
+            }
+            else {
+                document.write('this number is not divisible')
+
+            }
+
+
+        }
+        checkDivisible(10, 2);
+
+        // var posNegNumber = 12;
+
+        // if (posNegNumber > 0) {
+        //     document.write('This number is positive')
+        // }
+        // else {
+        //     document.write('This number is Nagetive')
+
+        // }
+
+        function checkPositiveNagetiveNum(posNegNumber) {
+            if (posNegNumber > 0) {
+                document.write('This number is positive')
+            }
+            else {
+                document.write('This number is Nagetive')
+
+            }
+        }
+        checkPositiveNagetiveNum(-7);
+
+        // var s1 = 60
+        // var s2 = 30
+        // var s3 = 60
+
+        // if (s1 == s2 && s2 == s3 && s1 == s3) {
+        //     document.write('This is Equilateral triangle')
+        // }
+        // else if (s1 == s2 || s2 == s3 || s1 == s3) {
+        //     document.write('This is Isosceles triangle')
+        // }
+        // else {
+        //     document.write('This is Scelene triangle')
+        // }
+
+        function checkTriangle(s1, s2, s3) {
+            if (s1 == s2 && s2 == s3 && s1 == s3) {
+                document.write('This is Equilateral triangle')
+            }
+            else if (s1 == s2 || s2 == s3 || s1 == s3) {
+                document.write('This is Isosceles triangle')
+            }
+            else {
+                document.write('This is Scelene triangle')
+            }
+
+        }
+        checkTriangle(60, 30, 60);
+        document.write('<br>');
+        document.write('<br>');
+
+
+
+    </script>
+
+    <input type="text" name="" id="odd-even-num" value="">
+    <button onclick="oddEvenNum()">Click me </button><br>
+    <p id="result">see here for
+        odd-even-result</p>
+
+    <script>
+        function oddEvenNum() {
+            var b = document.getElementById('odd-even-num').value;
+            if (b % 2 == 0) {
+                document.getElementById('result').innerHTML = 'this number is Even';
+                // document.write('this number is even')
+            }
+            else {
+                document.getElementById('result').innerHTML = 'this number is Odd';
+
+                // document.write('this number is odd')
+            }
+
+        }
+
+    </script>
+
+    <!-- day-5- lecture -->
+
+    <script>
+        var a = 3;
+        switch (a) {
+            case 1:
+                document.write('case 1');
+                break;
+            case 2:
+                document.write('case 2');
+                break;
+            case 3:
+                document.write('case 3');
+                break;
+            case 4:
+                document.write('case 4');
+                break;
+            case 5:
+                document.write('case 5');
+                break;
+            default:
+                document.write('case default');
+
+        }
+
+        // var day = 'saturday';
+        // switch (day) {
+        //     case 'monday':
+        //         document.write('today is monday');
+        //         break;
+        //     case 'tuesday':
+        //         document.write('today is tuesday');
+        //         break;
+        //     case 'wednesday':
+        //         document.write('today is wednesday');
+        //         break;
+        //     case 'thursday':
+        //         document.write('today is thursday');
+        //         break;
+        //     case 'friday':
+        //         document.write('today is friday');
+        //         break;
+        //     case 'saturday':
+        //         document.write('today is saturday');
+        //         break;
+        //     case 'sunday':
+        //         document.write('today is sunday');
+        //         break;
+        //     default:
+        //         document.write('case default');
+
+        // }
+        // for loop increment
+        for (var x = 1; x <= 5; x = x + 1) {
+            document.write(x + 'nagraj  <br>');
+
+        }
+        document.write('<br>');
+
+
+        // for loop decrement
+        for (var x = 5; x >= 1; x = x - 1) {
+            document.write(x + 'nagraj  <br>');
+        }
+        document.write('<br>');
+
+
+        // for loop table
+
+        for (var x = 1; x <= 10; x = x + 1) {
+            document.write(x * 10);
+            document.write('<br>');
+
+        }
+        document.write('<br>');
+
+        for (var x = 1; x <= 5; x = x + 1) {
+            for (var j = 1; j <= x; j = j + 1) {
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+        document.write('<br>');
+        /*
+         for (var x = 1; x <= 5; x = x + 1) {
+            for (var j = 1; j <= x; j = j + 1) {
+                document.write('*');
+            }
+            document.write('_nagraj_');
+        }
+        document.write('<br>');
+        */
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

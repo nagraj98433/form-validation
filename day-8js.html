@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .my-input {
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cut-paste-field {
+            background-color: black;
+            border-radius: 5px;
+            height: 25px;
+            width: 250px;
+            display: none;
+        }
+
+        .cut-paste-field ul li {
+            display: inline-block;
+            margin: 0 5.9px;
+            color: white;
+            justify-content: center;
+            font-size: small;
+        }
+
+        .cut-paste-field ul {
+            margin: 1.9px 0;
+            padding-left: 5px;
+            padding-top: 2px;
+        }
+
+        .my-input input {
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .mt select {
+            margin-top: 3rem;
+            width: 100%;
+            height: 30px;
+        }
+
+        .main-div {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+            margin-top: 5rem;
+
+        }
+
+        .form {
+            background-color: #f2deb3;
+            width: 50%;
+            display: flex;
+        }
+
+        .form .form-inside form input {
+            display: block;
+            padding: 10px 10px;
+            margin: 10px 0;
+            width: 91%;
+        }
+
+        .greeting-card {
+            /* background-color: green; */
+            width: 50%;
+            background-image: url(/img/flower.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .greeting-card-inside {
+            width: 46%;
+            margin: 100px auto 0px;
+        }
+
+        .greeting-card-inside p {
+            margin: 32px 0px;
+        }
+
+
+        .form-inside {
+            width: 41%;
+            margin: auto;
+        }
+
+        .font-style {
+            font-family: 'Zhi Mang Xing', cursive;
+            font-size: 3.4rem;
+            font-weight: 600;
+            color: cornflowerblue;
+        }
+
+        .name {
+            color: #ff0c6a;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .day {
+            color: #ff9914f5;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="my-input">
+        <input type="text" name="" value="" placeholder="Type and copy the text" id="on-copy" oncopy='onCopy()'
+            oninput="cut()">
+    </div>
+    <div class="my-input cut-paste-field" id="d-block">
+        <ul>
+            <li>Cut</li>
+            <li>Copy</li>
+            <li>Paste</li>
+            <li>Web search</li>
+            <li>Define</li>
+        </ul>
+    </div>
+    <script>
+        function onCopy() {
+            document.getElementById('d-block').style.display = 'block';
+        }
+        function cut() {
+            document.getElementById('d-block').style.display = 'none';
+        }
+    </script>
+    <div class="my-input mt">
+        <form action="">
+            <select name="" id="onChange" onchange="on_Change(event)">
+                <option value="-">Select here</option>
+                <option value="'Python'">Python</option>
+                <option value="'Angular'">Angular</option>
+                <option value="'Node.js'">Node.js</option>
+                <option value="'Bootstrap'">Bootstrap</option>
+                <option value="'PHP'">PHP</option>
+                <option value="'React'">React</option>
+
+            </select>
+        </form>
+        <div style="background-color: rgb(213, 238, 238);">
+            <p id="on-change1">.</p>
+        </div>
+
+    </div>
+    <script>
+        function on_Change(event) {
+            var b = document.getElementById('onChange').value;
+            // var a = event.target.value;
+            document.getElementById('on-change1').innerHTML = 'You have selected' + ' ' + b;
+
+        }
+    </script>
+    <div class="main-div">
+        <div class="form">
+            <div class="form-inside">
+                <caption>
+                    <h1>Invitation Card</h1>
+                </caption>
+                <form action="">
+                    <input type="text" name="" id="name1" value="" placeholder="Enter Name:" oninput="myfun1()">
+                    <input type="text" name="" id="contact1" value="" placeholder="Enter Day:" oninput="myfun2()">
+                    <span style="display: flex;"><input type="date" name="" id="date1" value="" placeholder=""
+                            oninput="myfun5()">
+                        <input type="time" name="" id="time1" value="" placeholder="" oninput="myfun6()"></span>
+                    <input type="text" name="" id="message1" value="" placeholder="Enter Address:" oninput="myfun3()">
+                    <input type="mail" name="" id="email1" value="" placeholder="Invited By:" oninput="myfun4()">
+
+                </form>
+            </div>
+        </div>
+        <div class="greeting-card ">
+            <div class="greeting-card-inside">
+                <p style="color: #ff9914f5; font-size: 20px; font-weight: bold;">JOIN US AS WE CELEBRATE</p>
+                <p id="name" style="color: #ff0c6a; font-size: 2rem; font-weight: bold;">NAME</p>
+                <p id="contact" style="color: #ff9914f5; font-size: 2rem; font-weight: bold;">Birthday</p>
+                <span style="display: flex;">
+                    <p id="date"></p>
+                    <p id="time"></p>
+
+                </span>
+                <p id="message" style="color: blue;">A-123, Street, Area, City, State</p>
+                <p id="email"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        function myfun1() {
+            var a = document.getElementById('name1').value;
+            document.getElementById('name').innerHTML = a;
+            document.getElementById('name').setAttribute('class', 'name');
+
+        }
+        function myfun2() {
+            var a = document.getElementById('contact1').value;
+            document.getElementById('contact').innerHTML = a;
+            document.getElementById('contact').setAttribute('class', 'day');
+
+        }
+        function myfun3() {
+            var a = document.getElementById('message1').value;
+            document.getElementById('message').innerHTML = a;
+            // document.getElementById('message').setAttribute('class', 'font-style');
+
+
+        }
+        function myfun4() {
+            var a = document.getElementById('email1').value;
+            document.getElementById('email').innerHTML = a;
+        }
+        function myfun5() {
+            var a = document.getElementById('date1').value;
+            document.getElementById('date').innerHTML = 'Day' + ',' + ' ' + a;
+        }
+        function myfun6() {
+            var a = document.getElementById('time1').value;
+            document.getElementById('time').innerHTML = 'At' + ',' + ' ' + a;
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

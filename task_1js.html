@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onscroll="onScroll(event)">
+    <div class="header"></div>
+
+    <div class="navbar" id="scroll">
+        <ul class="nav-left d-inline" id="scroll-text">
+            <li class="nav-left-text">BOOTSTRAP MENU</li>
+            <ul class="nav-right ">
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>PRODUCTS</li>
+                <li>SRVICES</li>
+                <li>CONTACT</li>
+            </ul>
+        </ul>
+
+    </div>
+
+    <script>
+        var navbar = document.getElementById('scroll');
+        function onScroll() {
+            if (window.scrollY > 50) {
+                navbar.style.position = 'fixed';
+                navbar.style.backgroundColor = 'black';
+                navbar.style.color = 'white';
+                navbar.style.top = '0';
+            }
+            else {
+                navbar.style.position = 'sticky';
+                navbar.style.backgroundColor = 'blueviolet';
+                navbar.style.color = 'yellow';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
